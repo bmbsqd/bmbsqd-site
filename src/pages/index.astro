@@ -1,0 +1,89 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import HeroSection from '@/components/HeroSection.astro';
+import GlobalPresence from '@/components/GlobalPresence.astro';
+import TrackRecord from '@/components/TrackRecord.astro';
+import TechnologyExpertise from '@/components/TechnologyExpertise.astro';
+import ServiceOfferings from '@/components/ServiceOfferings.astro';
+import ContactSection from '@/components/ContactSection.astro';
+---
+
+<BaseLayout
+	title="Bombsquad - Advanced Technology Leadership"
+	description="25+ years of cutting-edge technology development and innovation. From Los Angeles to Stockholm to Singapore, we deliver world-class solutions that transform businesses and drive industry leadership."
+	keywords="technology consulting, web3, blockchain, AI, machine learning, enterprise development, Fortune 500, startup technology, Los Angeles, Stockholm, Singapore, bombsquad, BMBSQD"
+>
+	<main>
+		<!-- Hero Section -->
+		<HeroSection />
+
+		<!-- Global Presence -->
+		<GlobalPresence />
+
+		<!-- Track Record & Achievements -->
+		<TrackRecord />
+
+		<!-- Technology Expertise -->
+		<TechnologyExpertise />
+
+		<!-- Service Offerings -->
+		<ServiceOfferings />
+
+		<!-- Contact Section -->
+		<ContactSection />
+
+		<!-- Footer -->
+		<footer class="bg-card text-card-foreground py-12 border-t border-border">
+			<div class="max-w-7xl mx-auto px-6">
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+					<!-- Company Info -->
+					<div class="md:col-span-2">
+						<img src="/logo-white.png" alt="Bombsquad" class="h-12 mb-4" />
+						<p class="text-muted-foreground mb-4 max-w-md">
+							Advanced technology leadership with 25+ years of experience
+							delivering cutting-edge solutions across three continents.
+						</p>
+						<div class="flex space-x-4">
+							<span class="text-sm">Los Angeles</span>
+							<span class="text-muted-foreground">•</span>
+							<span class="text-sm">Stockholm</span>
+							<span class="text-muted-foreground">•</span>
+							<span class="text-sm">Singapore</span>
+						</div>
+					</div>
+
+					<!-- Quick Links -->
+					<div>
+						<h3 class="text-foreground font-semibold mb-4">Services</h3>
+						<ul class="space-y-2 text-sm">
+							<li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">Technology Development</a></li>
+							<li><a href="#services" class="text-muted-foreground hover:text-foreground transition-colors">Professional Advisory</a></li>
+							<li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">AI & Machine Learning</a></li>
+							<li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">Web3 & Blockchain</a></li>
+						</ul>
+					</div>
+
+					<!-- Contact -->
+					<div>
+						<h3 class="text-foreground font-semibold mb-4">Contact</h3>
+						<ul class="space-y-2 text-sm">
+							<li><a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Start a Project</a></li>
+							<li><a href="#global-presence" class="text-muted-foreground hover:text-foreground transition-colors">Global Offices</a></li>
+							<li><a href="#track-record" class="text-muted-foreground hover:text-foreground transition-colors">Our Work</a></li>
+							<li><a href="https://www.bmbsqd.com" class="text-muted-foreground hover:text-foreground transition-colors">Legacy Site</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+					<p class="text-sm text-muted-foreground">
+						© 2025 Bombsquad. All rights reserved.
+					</p>
+					<p class="text-sm text-muted-foreground mt-2 md:mt-0">
+						Made with ❤️ on a sunny day in California
+					</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>

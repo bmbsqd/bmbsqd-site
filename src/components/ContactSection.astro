@@ -1,0 +1,204 @@
+---
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Phone, MessageSquare, CreditCard } from "lucide-react";
+---
+
+<section id="contact" class="py-20 bg-background">
+	<div class="container mx-auto px-6">
+		<!-- Section Header -->
+		<div class="text-center mb-16">
+			<h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
+				Ready to Transform Your Vision?
+			</h2>
+			<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+				Let's discuss how our 25+ years of technology leadership can accelerate your next breakthrough.
+				From concept to deployment, we're your partner in innovation.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+			<!-- Contact Information -->
+			<div class="space-y-8">
+				<!-- Email Contacts -->
+				<Card>
+					<CardHeader>
+						<CardTitle className="flex items-center gap-3">
+							<Mail className="w-5 h-5" />
+							Email Contacts
+						</CardTitle>
+						<CardDescription>
+							Direct access to our leadership and specialized teams
+						</CardDescription>
+					</CardHeader>
+					<CardContent className="space-y-4">
+						<div class="space-y-3">
+							<div class="flex items-center gap-3 p-3 bg-muted rounded-lg">
+								<MessageSquare className="w-4 h-4 text-primary" />
+								<div>
+									<div class="font-medium text-sm">CEO & Strategic Partnerships</div>
+									<a href="mailto:ceo@bmbsqd.com" class="text-primary hover:underline">ceo@bmbsqd.com</a>
+								</div>
+							</div>
+							<div class="flex items-center gap-3 p-3 bg-muted rounded-lg">
+								<Mail className="w-4 h-4 text-primary" />
+								<div>
+									<div class="font-medium text-sm">Project Services & Development</div>
+									<a href="mailto:services@bmbsqd.com" class="text-primary hover:underline">services@bmbsqd.com</a>
+								</div>
+							</div>
+							<div class="flex items-center gap-3 p-3 bg-muted rounded-lg">
+								<Mail className="w-4 h-4 text-primary" />
+								<div>
+									<div class="font-medium text-sm">General Inquiries</div>
+									<a href="mailto:info@bmbsqd.com" class="text-primary hover:underline">info@bmbsqd.com</a>
+								</div>
+							</div>
+							<div class="flex items-center gap-3 p-3 bg-muted rounded-lg">
+								<CreditCard className="w-4 h-4 text-primary" />
+								<div>
+									<div class="font-medium text-sm">Billing & Finance</div>
+									<a href="mailto:billing@bmbsqd.com" class="text-primary hover:underline">billing@bmbsqd.com</a>
+								</div>
+							</div>
+						</div>
+					</CardContent>
+				</Card>
+
+				<!-- Phone Contacts -->
+				<Card>
+					<CardHeader>
+						<CardTitle className="flex items-center gap-3">
+							<Phone className="w-5 h-5" />
+							Phone Numbers
+						</CardTitle>
+						<CardDescription>
+							Direct lines to our global offices
+						</CardDescription>
+					</CardHeader>
+					<CardContent className="space-y-3">
+						<div class="flex items-center justify-between p-3 bg-muted rounded-lg">
+							<span class="text-sm font-medium">Los Angeles</span>
+							<a href="tel:+1-310-555-0100" class="text-primary hover:underline">+1 (310) 555-0100</a>
+						</div>
+						<div class="flex items-center justify-between p-3 bg-muted rounded-lg">
+							<span class="text-sm font-medium">Stockholm</span>
+							<a href="tel:+46-8-555-0100" class="text-primary hover:underline">+46 8 555 0100</a>
+						</div>
+						<div class="flex items-center justify-between p-3 bg-muted rounded-lg">
+							<span class="text-sm font-medium">Singapore</span>
+							<a href="tel:+65-6555-0100" class="text-primary hover:underline">+65 6555 0100</a>
+						</div>
+					</CardContent>
+				</Card>
+			</div>
+
+			<!-- Contact Information -->
+			<div class="space-y-8">
+				<!-- Global Offices -->
+				<Card>
+					<CardHeader>
+						<CardTitle>Global Offices</CardTitle>
+					</CardHeader>
+					<CardContent className="space-y-6">
+						<div class="flex items-start space-x-4">
+							<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-foreground font-semibold">Los Angeles</h3>
+								<p class="text-muted-foreground text-sm">Silicon Beach Hub</p>
+								<p class="text-muted-foreground text-sm">Pacific Standard Time</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4">
+							<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-foreground font-semibold">Stockholm</h3>
+								<p class="text-muted-foreground text-sm">European Operations</p>
+								<p class="text-muted-foreground text-sm">Central European Time</p>
+							</div>
+						</div>
+
+						<div class="flex items-start space-x-4">
+							<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+								<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-foreground font-semibold">Singapore</h3>
+								<p class="text-muted-foreground text-sm">APAC Headquarters</p>
+								<p class="text-muted-foreground text-sm">Singapore Standard Time</p>
+							</div>
+						</div>
+					</CardContent>
+				</Card>
+
+				<!-- Response Time -->
+				<Card>
+					<CardHeader>
+						<CardTitle>Response Time</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<div class="space-y-4">
+							<div class="flex items-center justify-between">
+								<span class="text-muted-foreground">Initial Response</span>
+								<span class="text-foreground font-semibold">< 24 hours</span>
+							</div>
+							<div class="flex items-center justify-between">
+								<span class="text-muted-foreground">Project Proposal</span>
+								<span class="text-foreground font-semibold">< 1 week</span>
+							</div>
+							<div class="flex items-center justify-between">
+								<span class="text-muted-foreground">Project Kickoff</span>
+								<span class="text-foreground font-semibold">< 2 weeks</span>
+							</div>
+						</div>
+					</CardContent>
+				</Card>
+
+				<!-- Why Choose Us -->
+				<Card>
+					<CardHeader>
+						<CardTitle>Why Choose Bombsquad</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<div class="space-y-3">
+							<div class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+								</svg>
+								<span class="text-sm">25+ years proven track record</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+								</svg>
+								<span class="text-sm">Multiple $100M+ technology exits</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+								</svg>
+								<span class="text-sm">Award-winning innovations</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+									<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+								</svg>
+								<span class="text-sm">Global Fortune 500 clientele</span>
+							</div>
+						</div>
+					</CardContent>
+				</Card>
+			</div>
+		</div>
+	</div>
+</section>
