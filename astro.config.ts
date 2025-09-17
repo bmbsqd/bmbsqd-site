@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import sitemap from '@astrojs/sitemap'
-import compress from 'astro-compress'
 import react from '@astrojs/react'
 
 const assetPrefix = 'lib/'
@@ -21,10 +20,7 @@ export default defineConfig({
 
 	integrations: [
 		react(),
-		sitemap(),
-		compress({
-			Image: false,
-		}),
+		sitemap()
 	],
 
 	scopedStyleStrategy: 'class',

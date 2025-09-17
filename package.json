@@ -44,7 +44,7 @@
 		"sharp": "latest",
 		"tailwind-merge": "^3.3.1",
 		"tailwindcss": "latest",
-		"zod": "^3.25.76"
+		"zod": "^4.1.9"
 	},
 	"devDependencies": {
 		"@tailwindcss/vite": "latest",
