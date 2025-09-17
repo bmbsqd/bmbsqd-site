@@ -1,4 +1,6 @@
 ---
+import { ThemeManager } from '@/components/ThemeManager';
+
 export interface Props {
 	title: string;
 	description?: string;
@@ -98,6 +100,9 @@ const fullTitle = title.includes('Bombsquad') ? title : `${title} | Bombsquad`;
 	</head>
 	<body>
 		<slot />
+
+		<!-- Theme Manager for CTRL-B shortcut -->
+		<ThemeManager client:load />
 
 		<style is:global>
 			@import "@/styles/global.css";
