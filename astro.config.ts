@@ -11,7 +11,7 @@ export default defineConfig({
 	outDir: 'dist',
 
 	build: {
-		inlineStylesheets: 'always',
+		inlineStylesheets: 'auto',
 	},
 
 	experimental: {

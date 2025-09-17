@@ -1,6 +1,6 @@
 ---
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
+import { MapPin, Clock, Calendar, Zap, BarChart3, Globe } from "lucide-react";
 ---
 
 <section id="global-presence" class="py-20 bg-background">
@@ -23,9 +23,7 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 				<CardHeader>
 					<CardTitle className="flex items-center gap-3">
 						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-							</svg>
+							<MapPin className="w-5 h-5 text-primary-foreground" />
 						</div>
 						Los Angeles
 					</CardTitle>
@@ -41,11 +39,11 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 							<span>PST/PDT Timezone</span>
 						</div>
 						<div class="flex items-center gap-2">
-							<Film className="w-4 h-4" />
+							<Calendar className="w-4 h-4" />
 							<span>Entertainment Hub</span>
 						</div>
 						<div class="flex items-center gap-2">
-							<Rocket className="w-4 h-4" />
+							<Zap className="w-4 h-4" />
 							<span>Startup Ecosystem</span>
 						</div>
 					</div>
@@ -57,9 +55,7 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 				<CardHeader>
 					<CardTitle className="flex items-center gap-3">
 						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-							</svg>
+							<MapPin className="w-5 h-5 text-primary-foreground" />
 						</div>
 						Stockholm
 					</CardTitle>
@@ -75,7 +71,7 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 							<span>CET/CEST Timezone</span>
 						</div>
 						<div class="flex items-center gap-2">
-							<Building className="w-4 h-4" />
+							<BarChart3 className="w-4 h-4" />
 							<span>Tech Innovation</span>
 						</div>
 						<div class="flex items-center gap-2">
@@ -91,9 +87,7 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 				<CardHeader>
 					<CardTitle className="flex items-center gap-3">
 						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<svg class="w-5 h-5 text-primary-foreground" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-							</svg>
+							<MapPin className="w-5 h-5 text-primary-foreground" />
 						</div>
 						Singapore
 					</CardTitle>
@@ -109,7 +103,9 @@ import { Clock, Film, Rocket, Globe, Building, Coins } from "lucide-react";
 							<span>SGT Timezone</span>
 						</div>
 						<div class="flex items-center gap-2">
-							<Coins className="w-4 h-4" />
+							<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M8 8a6 6 0 1 1 12 0v2.07a2 2 0 0 1-1.42 1.91L16 13v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2l-2.58-1.02A2 2 0 0 1 6 10.07V8z"/>
+							</svg>
 							<span>Fintech Hub</span>
 						</div>
 						<div class="flex items-center gap-2">
