@@ -52,9 +52,44 @@ The theme editor manages these CSS custom properties:
 
 - **Dark Mode Toggle**: Instantly switch between light and dark modes with persistent localStorage storage
 - **CSS Support**: Direct CSS editing with full support for :root, .dark selectors, and @theme blocks
+- **Semantic Classes**: Components use semantic classes like `card-background`, `button-primary-background`
 - **Live Preview**: Changes apply instantly without page refresh
 - **OKLCH Colors**: Full support for modern OKLCH color format
 - **Persistent State**: Dark mode preference saved to localStorage
+
+## Semantic Component Classes
+
+The site now uses semantic CSS classes that make theming easier:
+
+### Card Components
+- `.card-background` - Card background color
+- `.card-foreground` - Card text color
+- `.card-border` - Card border color
+
+### Button Components
+- `.button-primary-background` - Primary button background
+- `.button-primary-foreground` - Primary button text
+- `.button-secondary-background` - Secondary button background
+- `.button-secondary-foreground` - Secondary button text
+
+### Layout Components
+- `.hero-background` - Hero section background
+- `.section-background` - General section background
+
+### How to Customize
+
+Change component colors by updating the semantic class definitions:
+
+```css
+@layer utilities {
+  .card-background {
+    @apply bg-blue-100; /* Custom card background */
+  }
+  .button-primary-background {
+    @apply bg-green-500; /* Custom primary button */
+  }
+}
+```
 
 ## Notes
 

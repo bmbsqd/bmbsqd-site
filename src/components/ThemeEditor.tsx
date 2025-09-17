@@ -53,7 +53,23 @@ function getCurrentTheme() {
 			}
 		});
 
-		return `:root {\n${rootVariables.join('\n')}\n}\n\n.dark {\n  /* Add dark theme variables here */\n}`;
+		const semanticClasses = `
+/* Semantic component classes - update these to change component colors */
+@layer utilities {
+  .card-background { @apply bg-card; }
+  .card-foreground { @apply text-card-foreground; }
+  .card-border { @apply border-border; }
+
+  .button-primary-background { @apply bg-primary; }
+  .button-primary-foreground { @apply text-primary-foreground; }
+  .button-secondary-background { @apply bg-secondary; }
+  .button-secondary-foreground { @apply text-secondary-foreground; }
+
+  .hero-background { @apply bg-background; }
+  .section-background { @apply bg-background; }
+}`;
+
+		return `:root {\n${rootVariables.join('\n')}\n}\n\n.dark {\n  /* Add dark theme variables here */\n}\n${semanticClasses}`;
 	}
 
 	// Convert existing CSS rules to readable format
@@ -155,7 +171,7 @@ export function ThemeEditor({ isOpen, onClose }: ThemeEditorProps) {
 						<div>
 							<h2 className="text-xl font-semibold">Theme Editor</h2>
 							<p className="text-sm text-muted-foreground mt-1">
-								Edit CSS custom properties for the current theme. Press CTRL-B to toggle.
+								Edit CSS custom properties and semantic classes. Press CTRL-B to toggle.
 							</p>
 						</div>
 						<div className="flex items-center gap-2">

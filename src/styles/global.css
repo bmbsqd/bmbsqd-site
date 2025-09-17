@@ -194,3 +194,70 @@ html {
     letter-spacing: var(--tracking-normal);
 	}
 }
+
+@layer utilities {
+  /* Semantic color classes for components */
+
+  /* Card component colors */
+  .card-background {
+    @apply bg-card;
+  }
+  .card-foreground {
+    @apply text-card-foreground;
+  }
+  .card-border {
+    @apply border-border;
+  }
+
+  /* Button component colors */
+  .button-primary-background {
+    @apply bg-primary;
+  }
+  .button-primary-foreground {
+    @apply text-primary-foreground;
+  }
+  .button-secondary-background {
+    @apply bg-secondary;
+  }
+  .button-secondary-foreground {
+    @apply text-secondary-foreground;
+  }
+
+  /* Input component colors */
+  .input-background {
+    @apply bg-background;
+  }
+  .input-foreground {
+    @apply text-foreground;
+  }
+  .input-border {
+    @apply border-input;
+  }
+  .input-placeholder {
+    @apply placeholder:text-muted-foreground;
+  }
+
+  /* Section component colors */
+  .section-background {
+    @apply bg-background;
+  }
+  .section-foreground {
+    @apply text-foreground;
+  }
+
+  /* Hero component colors */
+  .hero-background {
+    @apply bg-background;
+  }
+  .hero-foreground {
+    @apply text-foreground;
+  }
+
+  /* Badge component colors */
+  .badge-background {
+    @apply bg-secondary;
+  }
+  .badge-foreground {
+    @apply text-secondary-foreground;
+  }
+}
