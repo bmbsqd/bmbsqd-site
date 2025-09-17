@@ -3,6 +3,7 @@ import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
+import { Switch } from './ui/switch';
 
 interface ThemeEditorProps {
 	isOpen: boolean;
@@ -87,12 +88,17 @@ function applyTheme(cssText: string) {
 export function ThemeEditor({ isOpen, onClose }: ThemeEditorProps) {
 	const [themeText, setThemeText] = useState('');
 	const [error, setError] = useState('');
+	const [isDarkMode, setIsDarkMode] = useState(false);
 	const modalRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (isOpen) {
 			setThemeText(getCurrentTheme());
 			setError('');
+			// Check current dark mode state from DOM and localStorage
+			const isDark = document.documentElement.classList.contains('dark') ||
+				localStorage.getItem('theme') === 'dark';
+			setIsDarkMode(isDark);
 		}
 	}, [isOpen]);
 
@@ -124,6 +130,18 @@ export function ThemeEditor({ isOpen, onClose }: ThemeEditorProps) {
 		setError('');
 	}
 
+	function handleDarkModeToggle(checked: boolean) {
+		setIsDarkMode(checked);
+		const root = document.documentElement;
+		if (checked) {
+			root.classList.add('dark');
+		} else {
+			root.classList.remove('dark');
+		}
+		// Store preference in localStorage
+		localStorage.setItem('theme', checked ? 'dark' : 'light');
+	}
+
 	if (!isOpen) return null;
 
 	return (
@@ -133,10 +151,24 @@ export function ThemeEditor({ isOpen, onClose }: ThemeEditorProps) {
 				className="w-full max-w-2xl max-h-[80vh] overflow-hidden flex flex-col"
 			>
 				<div className="p-6 border-b">
-					<h2 className="text-xl font-semibold">Theme Editor</h2>
-					<p className="text-sm text-muted-foreground mt-1">
-						Edit CSS custom properties for the current theme. Press CTRL-B to toggle.
-					</p>
+					<div className="flex items-center justify-between">
+						<div>
+							<h2 className="text-xl font-semibold">Theme Editor</h2>
+							<p className="text-sm text-muted-foreground mt-1">
+								Edit CSS custom properties for the current theme. Press CTRL-B to toggle.
+							</p>
+						</div>
+						<div className="flex items-center gap-2">
+							<Label htmlFor="dark-mode-toggle" className="text-sm font-medium">
+								Dark Mode
+							</Label>
+							<Switch
+								id="dark-mode-toggle"
+								checked={isDarkMode}
+								onCheckedChange={handleDarkModeToggle}
+							/>
+						</div>
+					</div>
 				</div>
 
 				<div className="flex-1 p-6 overflow-y-auto">
