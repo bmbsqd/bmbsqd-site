@@ -4,117 +4,117 @@ import { MapPin, Clock, Calendar, Zap, BarChart3, Globe } from "lucide-react";
 ---
 
 <section id="global-presence" class="py-20 bg-background">
-	<div class="container mx-auto px-6">
-		<!-- Section Header -->
-		<div class="text-center mb-16">
-			<h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
-				Global Presence
-			</h2>
-			<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-				Three strategic locations spanning continents, ensuring 24/7 capability
-				and worldwide expertise deployment for our clients.
-			</p>
-		</div>
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        Global Presence
+      </h2>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Three strategic locations spanning continents, ensuring 24/7 capability
+        and worldwide expertise deployment for our clients.
+      </p>
+    </div>
 
-		<!-- Locations Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<!-- Los Angeles -->
-			<Card>
-				<CardHeader>
-					<CardTitle className="flex items-center gap-3">
-						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<MapPin className="w-5 h-5 text-primary-foreground" />
-						</div>
-						Los Angeles
-					</CardTitle>
-					<CardDescription>
-						Silicon Beach headquarters driving innovation in entertainment technology
-						and startup ecosystem.
-					</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div class="space-y-2 text-sm text-muted-foreground">
-						<div class="flex items-center gap-2">
-							<Clock className="w-4 h-4" />
-							<span>PST/PDT Timezone</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<Calendar className="w-4 h-4" />
-							<span>Entertainment Hub</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<Zap className="w-4 h-4" />
-							<span>Startup Ecosystem</span>
-						</div>
-					</div>
-				</CardContent>
-			</Card>
+    <!-- Locations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Los Angeles -->
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <MapPin className="w-5 h-5 text-primary-foreground" />
+            </div>
+            Los Angeles
+          </CardTitle>
+          <CardDescription>
+            Silicon Beach headquarters driving innovation in entertainment technology
+            and startup ecosystem.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>PST/PDT Timezone</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              <span>Entertainment Hub</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Zap className="w-4 h-4" />
+              <span>Startup Ecosystem</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
-			<!-- Stockholm -->
-			<Card>
-				<CardHeader>
-					<CardTitle className="flex items-center gap-3">
-						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<MapPin className="w-5 h-5 text-primary-foreground" />
-						</div>
-						Stockholm
-					</CardTitle>
-					<CardDescription>
-						Nordic innovation center with deep roots in European technology
-						leadership and design excellence.
-					</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div class="space-y-2 text-sm text-muted-foreground">
-						<div class="flex items-center gap-2">
-							<Clock className="w-4 h-4" />
-							<span>CET/CEST Timezone</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<BarChart3 className="w-4 h-4" />
-							<span>Tech Innovation</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<Globe className="w-4 h-4" />
-							<span>European Gateway</span>
-						</div>
-					</div>
-				</CardContent>
-			</Card>
+      <!-- Stockholm -->
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <MapPin className="w-5 h-5 text-primary-foreground" />
+            </div>
+            Stockholm
+          </CardTitle>
+          <CardDescription>
+            Nordic innovation center with deep roots in European technology
+            leadership and design excellence.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>CET/CEST Timezone</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <BarChart3 className="w-4 h-4" />
+              <span>Tech Innovation</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Globe className="w-4 h-4" />
+              <span>European Gateway</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
-			<!-- Singapore -->
-			<Card>
-				<CardHeader>
-					<CardTitle className="flex items-center gap-3">
-						<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-							<MapPin className="w-5 h-5 text-primary-foreground" />
-						</div>
-						Singapore
-					</CardTitle>
-					<CardDescription>
-						Asia-Pacific command center connecting Eastern markets with
-						cutting-edge fintech and blockchain expertise.
-					</CardDescription>
-				</CardHeader>
-				<CardContent>
-					<div class="space-y-2 text-sm text-muted-foreground">
-						<div class="flex items-center gap-2">
-							<Clock className="w-4 h-4" />
-							<span>SGT Timezone</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M8 8a6 6 0 1 1 12 0v2.07a2 2 0 0 1-1.42 1.91L16 13v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2l-2.58-1.02A2 2 0 0 1 6 10.07V8z"/>
-							</svg>
-							<span>Fintech Hub</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<Globe className="w-4 h-4" />
-							<span>APAC Gateway</span>
-						</div>
-					</div>
-				</CardContent>
-			</Card>
-		</div>
-	</div>
+      <!-- Singapore -->
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-3">
+            <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <MapPin className="w-5 h-5 text-primary-foreground" />
+            </div>
+            Singapore
+          </CardTitle>
+          <CardDescription>
+            Asia-Pacific command center connecting Eastern markets with
+            cutting-edge fintech and blockchain expertise.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-2 text-sm text-muted-foreground">
+            <div class="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>SGT Timezone</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 8a6 6 0 1 1 12 0v2.07a2 2 0 0 1-1.42 1.91L16 13v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2l-2.58-1.02A2 2 0 0 1 6 10.07V8z"/>
+              </svg>
+              <span>Fintech Hub</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <Globe className="w-4 h-4" />
+              <span>APAC Gateway</span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
 </section>
