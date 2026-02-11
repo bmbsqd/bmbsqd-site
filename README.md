@@ -190,8 +190,8 @@ Professional contact methods integrated throughout the site:
 
 ## 📄 License
 
-Copyright © 2024 Bombsquad (BMBSQD). All rights reserved.
+Copyright © 2025 Bombsquad (BMBSQD). All rights reserved.
 
 ---
 
-Built with ❤️ using modern web technologies for a global technology leadership company.
+No frameworks were harmed in the making of this site. Several were deliberately left behind.
