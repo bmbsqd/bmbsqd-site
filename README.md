@@ -8,6 +8,7 @@ Modern Astro website for Bombsquad - Advanced Technology Leadership company with
 - **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework with oklch color system
 - **[shadcn/ui](https://ui.shadcn.com/)** - Beautiful and accessible React components
 - **[Lucide React](https://lucide.dev/)** - Modern SVG icon library
+- **[Biome](https://biomejs.dev/)** - Fast linter and formatter
 - **[CloudFlare Pages](https://pages.cloudflare.com/)** - Edge deployment platform
 - **TypeScript** - Type-safe development
 
@@ -15,8 +16,8 @@ Modern Astro website for Bombsquad - Advanced Technology Leadership company with
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- Node.js 20+
+- [Bun](https://bun.sh/)
 
 ### Setup
 
@@ -26,28 +27,31 @@ git clone <repository-url>
 cd bmbsqd-site
 
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
 
 # Preview production build
-npm run preview
+bun run preview
 
 # Preview with CloudFlare Wrangler (production environment)
-npm run preview:wrangler
+bun run preview:wrangler
 ```
 
 ### Available Scripts
 
-- `npm run dev` - Start development server at `http://localhost:4321`
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run preview:wrangler` - Preview with CloudFlare Wrangler at `http://localhost:8788`
-- `npm run deploy` - Deploy to CloudFlare Pages
+- `bun run dev` - Start development server at `http://localhost:4321`
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build locally
+- `bun run preview:wrangler` - Preview with CloudFlare Wrangler at `http://localhost:8788`
+- `bun run deploy` - Deploy to CloudFlare Pages
+- `bun run lint` - Lint with Biome
+- `bun run lint:fix` - Lint and auto-fix with Biome
+- `bun run format` - Format with Biome
 
 ## 📁 Project Structure
 
@@ -127,13 +131,13 @@ The site is configured for CloudFlare Pages deployment:
 
 ```bash
 # Deploy to production
-npm run deploy
+bun run deploy
 ```
 
 Build settings:
-- **Build command**: `npm run build`
+- **Build command**: `bun run build`
 - **Output directory**: `dist`
-- **Node version**: 18+
+- **Node version**: 20+
 
 ### Environment Variables
 
