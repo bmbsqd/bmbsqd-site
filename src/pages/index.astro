@@ -1,26 +1,47 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import HeroSection from '@/components/HeroSection.astro';
-import GlobalPresence from '@/components/GlobalPresence.astro';
-import TrackRecord from '@/components/TrackRecord.astro';
-import TechnologyExpertise from '@/components/TechnologyExpertise.astro';
-import ServiceOfferings from '@/components/ServiceOfferings.astro';
-import ContactSection from '@/components/ContactSection.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import HeroSection from '@/components/HeroSection.astro'
+import GlobalPresence from '@/components/GlobalPresence.astro'
+import TrackRecord from '@/components/TrackRecord.astro'
+import { ClientLogoMarquee } from '@/components/ui/client-logo-marquee'
+import TechnologyExpertise from '@/components/TechnologyExpertise.astro'
+import ServiceOfferings from '@/components/ServiceOfferings.astro'
+import ContactSection from '@/components/ContactSection.astro'
+import { ShinyText } from '@/components/ui/shiny-text'
 ---
 
 <BaseLayout
   title="Bombsquad - Advanced Technology Leadership"
   description="25+ years of cutting-edge technology development and innovation. From Los Angeles to Stockholm to Singapore, we deliver world-class solutions that transform businesses and drive industry leadership."
-  keywords="technology consulting, web3, blockchain, AI, machine learning, enterprise development, Fortune 500, startup technology, Los Angeles, Stockholm, Singapore, bombsquad, BMBSQD"
+  keywords="technology consulting, web3, blockchain, AI, machine learning, enterprise development, Fortune 500, startup technology, Los Angeles, Stockholm, Singapore, BOMBSQUAD, BMBSQD"
 >
+  <!-- Sticky Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 h-20 border-b border-[var(--stone-200)]/50" style="background: rgba(250, 247, 245, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+      <a href="#" class="text-lg" style="font-family: var(--font-heading); font-weight: 800; letter-spacing: 0.15em;">
+        <ShinyText client:load text="BOMBSQUAD" color="#1C1917" shineColor="#A67B5B" speed={3} spread={100} />
+      </a>
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#global-presence" class="text-[var(--stone-500)] hover:text-[var(--stone-900)] transition-colors text-sm font-medium">Presence</a>
+        <a href="#track-record" class="text-[var(--stone-500)] hover:text-[var(--stone-900)] transition-colors text-sm font-medium">Track Record</a>
+        <a href="#expertise" class="text-[var(--stone-500)] hover:text-[var(--stone-900)] transition-colors text-sm font-medium">Expertise</a>
+        <a href="#services" class="text-[var(--stone-500)] hover:text-[var(--stone-900)] transition-colors text-sm font-medium">Services</a>
+      </div>
+      <a href="#contact" class="btn-showroom text-xs py-2 px-5">Get Started</a>
+    </div>
+  </nav>
+
   <main>
     <!-- Hero Section -->
     <HeroSection />
 
+    <!-- Client Strip -->
+    <ClientLogoMarquee client:visible />
+
     <!-- Global Presence -->
     <GlobalPresence />
 
-    <!-- Track Record & Achievements -->
+    <!-- Track Record -->
     <TrackRecord />
 
     <!-- Technology Expertise -->
@@ -29,60 +50,26 @@ import ContactSection from '@/components/ContactSection.astro';
     <!-- Service Offerings -->
     <ServiceOfferings />
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <ContactSection />
 
     <!-- Footer -->
-    <footer class="bg-card text-card-foreground py-12 border-t border-border">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <!-- Company Info -->
-          <div class="md:col-span-2">
-            <img src="/logo-white.png" alt="Bombsquad" class="h-12 mb-4" />
-            <p class="text-muted-foreground mb-4 max-w-md">
-              Advanced technology leadership with 25+ years of experience
-              delivering cutting-edge solutions across three continents.
-            </p>
-            <div class="flex space-x-4">
-              <span class="text-sm">Los Angeles</span>
-              <span class="text-muted-foreground">•</span>
-              <span class="text-sm">Stockholm</span>
-              <span class="text-muted-foreground">•</span>
-              <span class="text-sm">Singapore</span>
-            </div>
-          </div>
-
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-foreground font-semibold mb-4">Services</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">Technology Development</a></li>
-              <li><a href="#services" class="text-muted-foreground hover:text-foreground transition-colors">Professional Advisory</a></li>
-              <li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">AI & Machine Learning</a></li>
-              <li><a href="#expertise" class="text-muted-foreground hover:text-foreground transition-colors">Web3 & Blockchain</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div>
-            <h3 class="text-foreground font-semibold mb-4">Contact</h3>
-            <ul class="space-y-2 text-sm">
-              <li><a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Start a Project</a></li>
-              <li><a href="#global-presence" class="text-muted-foreground hover:text-foreground transition-colors">Global Offices</a></li>
-              <li><a href="#track-record" class="text-muted-foreground hover:text-foreground transition-colors">Our Work</a></li>
-              <li><a href="https://www.bmbsqd.com" class="text-muted-foreground hover:text-foreground transition-colors">Legacy Site</a></li>
-            </ul>
+    <footer class="py-16 px-6 bg-[var(--stone-100)] border-t border-[var(--stone-200)]">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+          <span class="text-sm" style="font-family: var(--font-heading); font-weight: 800; letter-spacing: 0.15em;">
+            <ShinyText client:visible text="BOMBSQUAD" color="#A8A29E" shineColor="#D6D3D1" speed={4} spread={100} />
+          </span>
+          <div class="h-px w-16 md:w-48 bg-[var(--stone-200)]" />
+          <div class="flex gap-8 text-xs font-medium text-[var(--stone-400)]">
+            <span>Los Angeles</span>
+            <span>Stockholm</span>
+            <span>Singapore</span>
           </div>
         </div>
-
-        <div class="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p class="text-sm text-muted-foreground">
-            © 2025 Bombsquad. All rights reserved.
-          </p>
-          <p class="text-sm text-muted-foreground mt-2 md:mt-0">
-            Made with ❤️ on a sunny day in California
-          </p>
-        </div>
+        <p class="text-center text-[var(--stone-300)] text-xs mt-10">
+          &copy; 2025 Bombsquad. All rights reserved.
+        </p>
       </div>
     </footer>
   </main>

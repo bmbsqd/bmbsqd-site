@@ -1,6 +1,4 @@
 ---
-import { ThemeManager } from '@/components/ThemeManager';
-
 export interface Props {
   title: string;
   description?: string;
@@ -35,6 +33,13 @@ const fullTitle = title.includes('Bombsquad') ? title : `${title} | Bombsquad`;
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={url} />
 
+    <!-- Fonts: Cabinet Grotesk + Satoshi from Fontshare -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500&f[]=satoshi@700,500,400&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
@@ -53,11 +58,6 @@ const fullTitle = title.includes('Bombsquad') ? title : `${title} | Bombsquad`;
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/logo-white.png" />
-
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -100,9 +100,6 @@ const fullTitle = title.includes('Bombsquad') ? title : `${title} | Bombsquad`;
   </head>
   <body>
     <slot />
-
-    <!-- Theme Manager for CTRL-B shortcut -->
-    <ThemeManager client:load />
 
     <style is:global>
       @import "@/styles/global.css";

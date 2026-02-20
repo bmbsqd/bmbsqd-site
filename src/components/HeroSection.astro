@@ -1,33 +1,44 @@
 ---
-import { Button } from "@/components/ui/button";
+import { ScrollReveal } from '@/components/ui/scroll-reveal'
+import { ParallaxStarsBg } from '@/components/ui/parallax-stars-bg'
 ---
 
-<section class="w-full hero-background">
-  <div class="container mx-auto">
-    <div class="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
-      <div>
-        <Button variant="secondary" size="sm" className="gap-4">
-          25+ Years of Excellence
-        </Button>
-      </div>
-      <div class="flex gap-4 flex-col">
-        <h1 class="text-5xl md:text-7xl max-w-4xl tracking-tighter text-center font-regular">
-          Advanced Technology Leadership
+<ParallaxStarsBg client:load speed={1.2} className="min-h-[90vh] bg-[var(--stone-50)]">
+  <section class="flex items-center justify-center px-6 min-h-[90vh]">
+    <div class="text-center max-w-4xl mx-auto pt-24 pb-32">
+      <ScrollReveal client:visible>
+        <p class="text-[var(--stone-400)] text-sm font-medium tracking-wide uppercase mb-6">
+          25+ Years of Technology Leadership
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal client:visible delay={0.1}>
+        <h1 class="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.05] tracking-tighter text-[var(--stone-900)] mb-8">
+          Engineering Tomorrow's<br />Digital Landscape
         </h1>
-        <p class="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-3xl text-center">
+      </ScrollReveal>
+
+      <ScrollReveal client:visible delay={0.2}>
+        <p class="text-lg md:text-xl text-[var(--stone-500)] max-w-[42rem] mx-auto mb-12 leading-relaxed">
           From Los Angeles to Stockholm to Singapore, we deliver world-class solutions
           that transform businesses and drive industry leadership. Multiple $100M+ exits
           and award-winning innovations.
         </p>
-      </div>
-      <div class="flex flex-row gap-3">
-        <Button size="lg" className="gap-4" variant="outline">
-          <a href="#contact">Start Your Project</a>
-        </Button>
-        <Button size="lg" className="gap-4">
-          <a href="#expertise">Our Expertise</a>
-        </Button>
-      </div>
+      </ScrollReveal>
+
+      <ScrollReveal client:visible delay={0.3}>
+        <div class="flex items-center justify-center gap-8">
+          <a href="#contact" class="btn-showroom">
+            Start Your Project
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#expertise" class="text-[var(--stone-900)] text-sm font-medium underline underline-offset-4 decoration-[var(--stone-300)] hover:decoration-[var(--stone-900)] transition-colors">
+            Our Expertise
+          </a>
+        </div>
+      </ScrollReveal>
     </div>
-  </div>
-</section>
+  </section>
+</ParallaxStarsBg>
