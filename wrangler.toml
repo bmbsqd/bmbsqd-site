@@ -1,6 +1,14 @@
+#:schema node_modules/wrangler/config-schema.json
 name = "bmbsqd-site"
 compatibility_date = "2026-02-11"
-pages_build_output_dir = "dist"
+
+[[routes]]
+pattern = "preview.bmbsqd.dev"
+custom_domain = true
+
+[assets]
+directory = "dist"
+not_found_handling = "single-page-application"
 
 [vars]
 NODE_ENV = "production"

@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 const assetPrefix = 'lib/'
 
 export default defineConfig({
-  site: 'https://bmbsqd-site.pages.dev',
+  site: 'https://preview.bmbsqd.dev',
   output: 'static',
   outDir: 'dist',
 
