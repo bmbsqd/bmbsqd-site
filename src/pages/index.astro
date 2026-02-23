@@ -8,6 +8,7 @@ import TechnologyExpertise from '@/components/TechnologyExpertise.astro'
 import ServiceOfferings from '@/components/ServiceOfferings.astro'
 import ContactSection from '@/components/ContactSection.astro'
 import { ShinyText } from '@/components/ui/shiny-text'
+const currentYear = new Date().getFullYear()
 ---
 
 <BaseLayout
@@ -68,7 +69,7 @@ import { ShinyText } from '@/components/ui/shiny-text'
           </div>
         </div>
         <p class="text-center text-[var(--stone-300)] text-xs mt-10">
-          &copy; 2025 Bombsquad. All rights reserved.
+          &copy; {currentYear} Bombsquad. All rights reserved.
         </p>
       </div>
     </footer>
